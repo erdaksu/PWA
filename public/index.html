@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Classes And Activites</title>
+    <meta name="description"
+        content="Classes and Activities">
+    <meta name="author" content="Erdem">
+    <meta name="theme-color" content="#B12A34">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="icons/icon-512.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" sizes="192x192" href="icons/icon-192.png">
+    <link href="https://fonts.googleapis.com/css?family=Medula One" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="data/courses.js.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img id="logo" src="icons/icon-192.png" />
+            <ul>
+                <li><a class="active" href="#home">HOME</a></li>
+                <li><a href="users.html">FIND A CLASS</a></li>
+                <li><a href="users.html">USERS</a></li>
+            </ul>
+        </header>
+        <main>
+            <button id="notifications">REQUEST NOTIFICATIONS</button>
+
+            <section id="content">
+                <article v-for="course in courses">
+                    <img :src="'data/img/'+course.slug+'.png'" :alt="course.name">
+                    <!--<img src='data/img/placeholder.png' data-src="'data/img/' + course.slug'.png'" alt='NAME'> -->
+                    <h3>{{course.topic}}</h3>
+                    <span>Topic: <strong>{{course.topic}}</strong></span>
+                    <br>
+                    <span>Location: <strong>{{course.location}}</strong></span>
+                    <br>
+                    <span>Price: <strong>{{course.price}}</strong></span>
+                    <br>
+                    <span>More: <a :href="'http:////classesandactivities.com/' + course.slug">
+                            classesandactivities/{{course.slug}}</a></span>
+                    </ul>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-text">
+                <p>© CLASS AND ACTIVITIES BY ERDEM AKSU ©</p>
+                <p>CONTACT EMAIL: CLASSANDACTIVITESUPPORT@GMAIL.COM</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
