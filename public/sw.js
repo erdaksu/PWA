@@ -106,7 +106,6 @@ var appShellFiles = [
   '/PWA/public/index.html',
   '/PWA/public/style.css',
   '/PWA/public/app.js',
-  '/PWA/public/sw.js',
   '/PWA/public/favicon.ico',
   '/PWA/public/manifest.webmanifest',
   '/PWA/public/data/img',
