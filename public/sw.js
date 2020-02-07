@@ -1,4 +1,3 @@
-self.importScripts('data/courses.js');
 
 // Files to cache
 var cacheName = 'js13kPWA-v1';
