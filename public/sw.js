@@ -3,24 +3,24 @@ self.importScripts('data/courses.js');
 // Files to cache
 var cacheName = 'js13kPWA-v1';
 var appShellFiles = [
-  '/pwa-examples/js13kpwa/',
-  '/pwa-examples/js13kpwa/index.html',
-  '/pwa-examples/js13kpwa/app.js',
-  '/pwa-examples/js13kpwa/style.css',
-  '/pwa-examples/js13kpwa/fonts/graduate.eot',
-  '/pwa-examples/js13kpwa/fonts/graduate.ttf',
-  '/pwa-examples/js13kpwa/fonts/graduate.woff',
-  '/pwa-examples/js13kpwa/favicon.ico',
-  '/pwa-examples/js13kpwa/img/js13kgames.png',
-  '/pwa-examples/js13kpwa/img/bg.png',
-  '/pwa-examples/js13kpwa/icons/icon-32.png',
-  '/pwa-examples/js13kpwa/icons/icon-64.png',
-  '/pwa-examples/js13kpwa/icons/icon-96.png',
-  '/pwa-examples/js13kpwa/icons/icon-128.png',
-  '/pwa-examples/js13kpwa/icons/icon-168.png',
-  '/pwa-examples/js13kpwa/icons/icon-192.png',
-  '/pwa-examples/js13kpwa/icons/icon-256.png',
-  '/pwa-examples/js13kpwa/icons/icon-512.png'
+  '/PWA/public/',
+  '/PWA/public/index.html',
+  '/PWA/public/style.css',
+  '/PWA/public/app.js',
+  '/PWA/public/sw.js',
+  '/PWA/public/favicon.ico',
+  '/PWA/public/manifest.webmanifest',
+  '/PWA/public/data/img',
+  '/PWA/public/data/courses.js',
+  '/PWA/public/icons/icon-32.png',
+  '/PWA/public/icons/icon-64.png',
+  '/PWA/public/icons/icon-96.png',
+  '/PWA/public/icons/icon-128.png',
+  '/PWA/public/icons/icon-168.png',
+  '/PWA/public/icons/icon-192.png',
+  '/PWA/public/icons/icon-256.png',
+  '/PWA/public/icons/icon-512.png',
+  '/PWA/public/img/logo.png',
 ];
 
 var coursesImages = [];
