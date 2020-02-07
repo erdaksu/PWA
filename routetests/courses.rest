@@ -1,0 +1,62 @@
+//all courses
+GET http://localhost:3000/courses
+
+###
+
+//find a course
+GET http://localhost:3000/courses/5e3ca96be8fccd3068c3a467
+
+###
+
+//find a course by provider
+GET http://localhost:3000/courses/Erdem
+
+###
+
+//adding  a course
+POST http://localhost:3000/courses
+Content-Type: application/json
+
+{
+    "topic": "Maths",
+    "location": "Hendon",
+    "price": "150",
+    "provider": "Erdem",
+    "review": "4",
+    "author": "Me"
+}
+
+###
+
+//update a course
+PATCH http://localhost:3000/courses/5e3ca96be8fccd3068c3a467
+Content-Type: application/json
+
+{
+    "topic": "New Maths",
+    "location": "New Hendon",
+    "price": "250",
+    "provider": "New Erdem",
+    "review": "3",
+    "author": "New Me"
+}
+
+### 
+
+//delete a course
+DELETE http://localhost:3000/courses/5e3ca94ae8fccd3068c3a466
+
+###
+
+//delete all course
+DELETE http://localhost:3000/courses/
+
+###
+
+//demo courses
+POST http://localhost:3000/courses
+Content-Type: application/json
+
+
+
+

@@ -1,0 +1,16 @@
+//creating a new user
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "email": "Maths",
+    "password": "Hendon",
+    "type": "150",
+}
+
+###
+
+//retrieve user info by email
+GET http://localhost:3000/users/email
+
+###
