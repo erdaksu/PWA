@@ -22,15 +22,19 @@ const vueapp = new Vue({
 })
 
 // Registering Service Worker
-if('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('sw.js');
-};
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('sw.js')
+		.then((reg) => {
+			console.log('[Service Worker: Registered] ', reg);
+		})
+		.catch((err) => console.log('[Service Worker: Not Registered] ', err))
+}
 
 // Requesting permission for Notifications after clicking on the button
 var button = document.getElementById("notifications");
-button.addEventListener('click', function(e) {
-	Notification.requestPermission().then(function(result) {
-		if(result === 'granted') {
+button.addEventListener('click', function (e) {
+	Notification.requestPermission().then(function (result) {
+		if (result === 'granted') {
 			randomNotification();
 		}
 	});
@@ -52,27 +56,27 @@ function randomNotification() {
 
 // Progressive loading images
 var imagesToLoad = document.querySelectorAll('img[data-src]');
-var loadImages = function(image) {
+var loadImages = function (image) {
 	image.setAttribute('src', image.getAttribute('data-src'));
-	image.onload = function() {
+	image.onload = function () {
 		image.removeAttribute('data-src');
 	};
 };
-if('IntersectionObserver' in window) {
-	var observer = new IntersectionObserver(function(items, observer) {
-		items.forEach(function(item) {
-			if(item.isIntersecting) {
+if ('IntersectionObserver' in window) {
+	var observer = new IntersectionObserver(function (items, observer) {
+		items.forEach(function (item) {
+			if (item.isIntersecting) {
 				loadImages(item.target);
 				observer.unobserve(item.target);
 			}
 		});
 	});
-	imagesToLoad.forEach(function(img) {
+	imagesToLoad.forEach(function (img) {
 		observer.observe(img);
 	});
 }
 else {
-	imagesToLoad.forEach(function(img) {
+	imagesToLoad.forEach(function (img) {
 		loadImages(img);
 	});
 }
